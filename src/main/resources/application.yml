@@ -1,0 +1,22 @@
+spring:
+  profiles: #추가
+    active: local
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/querydsl
+    username: sa
+    password: querydsl
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql : true
+        #show_sql: true
+        use_sql_comments: true #실행되는 쿼리에 주석 출력
+logging.level:
+  org.hibernate.SQL: debug
+
+
+
